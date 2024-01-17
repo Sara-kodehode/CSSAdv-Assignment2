@@ -1,0 +1,45 @@
+div {
+  width: 250px;
+  height: 250px;
+  margin: 20px;
+  background-color: aqua;
+  border-top: 5px black solid;
+  border-right: 5px gray solid;
+  border-bottom: 5px green solid;
+  border-left: 5px greenyellow solid;
+  font-size: 20px;
+  text-align: center;
+  transition: all 2s;
+}
+
+#transform-div:hover {
+  transform: rotate(0.25turn);
+  transition: transform 2s ease;
+}
+
+#transition-div:hover {
+  transform: rotate(180deg);
+  border-radius: 50%;
+  background-color: green;
+}
+
+@keyframes changing-color {
+  from {
+    background-color: red;
+    left: 0px;
+    top: 0px;
+  }
+  to {
+    background-color: yellow;
+    left: 400px;
+    top: 0px;
+  }
+}
+
+#animation-div:focus {
+  position: relative;
+  animation-name: changing-color;
+  animation-duration: 4s;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+}
